@@ -1,0 +1,37 @@
+#!/bin/bash
+
+#Update te apt and install the apache2 server.
+
+sudo apt update
+sudo apt install apache2 -y
+
+
+#To remove the default apache server File.
+
+sudo rm -r /var/www/html/*
+
+
+#To create the index.html file.
+
+git clone https://github.com/thawaresameer715-cyber/Linux_Project_ApacheServer.git
+
+cd Linux_Project_ApacheServer 
+
+sudo apt install unzip
+
+unzip templatemo_596_electric_xtra.zip
+
+cd templatemo_596_electric_xtra 
+
+
+#Copy the website to the apache2 default folder.
+
+sudo cp -r ./* /var/www/html
+
+
+#Restart the apache2 server.
+
+sudo systemctl restart apache2
+
+
+echo "Websites hosted successfully..."

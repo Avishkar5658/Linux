@@ -1,0 +1,15 @@
+#!/bin/bash
+
+sudo apt update
+sudo apt install apache2 -y
+
+git clone https://github.com/thawaresameer715-cyber/Linux_Project_ApacheServer.git
+
+sudo rm -r /var/www/html/*
+
+cd Linux_Project_ApacheServer
+unzip templatemo_596_electric_xtra.zip
+
+sudo cp -r /root/filesystem/home/ubuntu/proj/Linux_Project_ApacheServer/templatemo_596_electric_xtra/* /var/www/html
+
+echo "Done"
